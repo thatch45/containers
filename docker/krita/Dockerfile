@@ -1,5 +1,4 @@
-FROM base/archlinux
-RUN pacman -Sy --noconfirm archlinux-keyring
-RUN pacman-key --refresh-keys
-RUN pacman -Syu --noconfirm --force krita
+FROM opensuse:42.2
+RUN zypper --non-interactive dup
+RUN zypper --non-interactive in --force-resolution krita
 CMD /usr/bin/krita
