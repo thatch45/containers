@@ -1,3 +1,3 @@
 FROM base/archlinux
-RUN pacman -Syu --no-confirm --force inkscape
+RUN pacman -Syu --noconfirm --force inkscape
 CMD /usr/bin/inkscape
